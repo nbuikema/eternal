@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1000vw;
+    height: 100vh;
+    display: block;
+}
+
+.stars {
+    background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    z-index: -1;
+}
+
+.twinkling {
+    background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    z-index: 0;
+
+    -moz-animation: move-twink-back 200s linear infinite;
+    -ms-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -15000px 5000px;
+    }
+}
+@-webkit-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -15000px 5000px;
+    }
+}
+@-moz-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -15000px 5000px;
+    }
+}
+@-ms-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -15000px 5000px;
+    }
+}
+
+.sun {
+    position: absolute;
+    width: 30vw;
+    top: 5vh;
+    left: 100vw;
+}
+
+.mercury {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 130vw;
+}
+
+.venus {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 145vw;
+}
+
+.earth {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 160vw;
+}
+
+.mars {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 175vw;
+}
+
+.jupiter {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 190vw;
+}
+
+.saturn {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 205vw;
+}
+
+.uranus {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 220vw;
+}
+
+.neptune {
+    position: absolute;
+    width: 10vw;
+    top: 30vh;
+    left: 235vw;
+}
+
+.rocket {
+    position: fixed;
+    left: 200px;
+    top: 600px;
+    width: 50px;
+    margin: 0 auto;
+    transform: rotate(90deg);
+    z-index: 80;
+}
+
+.fuselage {
+    width: 50px;
+}
+
+.nose {
+    width: 25px;
+    margin: 0 auto;
+    border-top: 15px solid #353535;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.head {
+    position: relative;
+    display:block;
+    border-bottom: 25px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 25px;
+    margin: 0 auto;
+}
+
+.neck {
+    position: relative;
+    width: 45px;
+    height: 30px;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
+
+.body {
+    position: relative;
+    width: 50px;
+    height: 120px;
+    background: #f4f4f4;
+    border-bottom: 3px solid #a81237;
+    border-top: 3px solid #a81237;
+}
+
+.reactor {
+    position: relative;
+    border-bottom: 30px solid #4f4f4f;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 30px;
+    margin: 0 auto;
+}
+
+.fire {
+    position: relative;
+    width: 25px;
+    height: 70px;
+    margin: 0 auto;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    animation: fire 0.2s infinite;
+}
+
+.left-fin {
+    position: absolute;
+    top: 73px;
+    right: 50px;
+    width: 5px;
+    border-bottom: 110px solid white;
+    border-left: 60px solid transparent;
+}
+
+.right-fin {
+    position: absolute;
+    top : 73px;
+    left: 50px;
+    width: 5px;
+    border-bottom: 110px solid white;
+    border-right: 60px solid transparent;
+}
+
+@keyframes fire {
+    0% {
+        background: linear-gradient(to bottom, rgba(255,134,28,1) 0%, rgba(239,1,124,1) 50%, rgba(237,3,3,1) 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom, rgba(237,3,3,1) 0%, rgba(255,134,28,1) 51%, rgba(239,1,124,1) 100%);
+    }
+    100% {
+        background: linear-gradient(to bottom, rgba(239,1,124,1) 0%, rgba(237,3,3,1) 51%, rgba(255,134,28,1) 100%);
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script type="text/javascript">
+        var rocket = null;
+        function init(){
+            rocket = document.getElementById("rocket");
+            rocket.style.position = 'fixed';
+            rocket.style.top = '600px';
+        }
+        window.onload = init;
+
+        function fly(event){				
+            var key = event.which || event.keyCode;
+            switch(key){
+                case 38: // up arrow key
+                    flyUp();
+                    break;
+                case 40: // down arrow key
+                    flyDown();
+                    break;
+            }
+        }
+        function flyUp(){
+            rocket.style.top = parseInt(rocket.style.top) - 10 + 'px';
+        }
+        function flyDown(){
+            rocket.style.top = parseInt(rocket.style.top) + 10 + 'px';
+        }
+    </script>
+</head>
+<body onkeydown='fly(event)'>
+    
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <img class="sun" src="./assets/imgs/sun.png" alt="Sun">
+
+    <img class="mercury" src="./assets/imgs/mercury.gif" alt="Mercury">
+
+    <img class="venus" src="./assets/imgs/venus.gif" alt="Venus">
+
+    <img class="earth" src="./assets/imgs/earth.gif" alt="Earth">
+
+    <img class="mars" src="./assets/imgs/mars.gif" alt="Mars">
+
+    <img class="jupiter" src="./assets/imgs/jupiter.gif" alt="Jupiter">
+
+    <img class="saturn" src="./assets/imgs/saturn.gif" alt="Saturn">
+
+    <img class="uranus" src="./assets/imgs/uranus.gif" alt="Uranus">
+
+    <img class="neptune" src="./assets/imgs/neptune.gif" alt="Neptune">
+
+    <div id="rocket" class="rocket">
+        <div class="fuselage">
+            <div class="nose"></div>
+            <div class="head"></div>
+            <div class="neck"></div>
+            <div class="body"></div>
+            <div class="reactor"></div>
+            <div class="fire">
+                <div class="spark1"></div>
+                <div class="spark2"></div>
+                <div class="spark3"></div>
+                <div class="spark4"></div>
+                <div class="spark5"></div>
+                <div class="spark6"></div>
+            </div>
+        </div>
+        <div class="left-fin"></div>
+        <div class="left-fin-end"></div>
+        <div class="right-fin"></div>
+        <div class="right-fin-end"></div>
+    </div>
+
+</body>
+</html>
